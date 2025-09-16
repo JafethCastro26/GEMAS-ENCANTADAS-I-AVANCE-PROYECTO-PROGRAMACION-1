@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\Board.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\Gem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\Board.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{783F7736-D93C-4D3C-A213-1CEEA3779771}|Proyecto Jafeth Castro\\Proyecto Jafeth Castro.vcxproj|solutionrelative:Proyecto Jafeth Castro\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Gem.h",
               "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.h",
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Gem.h",
@@ -51,7 +51,22 @@
               "ViewState": "AgIAACcAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-27T19:12:50.524Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Gem.cpp",
+              "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.cpp",
+              "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Gem.cpp",
+              "ToolTip": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.cpp",
+              "RelativeToolTip": "Proyecto Jafeth Castro\\Gem.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-27T22:33:37.847Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -59,19 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Gem.cpp",
-              "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.cpp",
-              "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Gem.cpp",
-              "ToolTip": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Gem.cpp",
-              "RelativeToolTip": "Proyecto Jafeth Castro\\Gem.cpp",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-27T22:33:37.847Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Game.h",
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Game.h",
@@ -79,7 +82,8 @@
               "RelativeToolTip": "Proyecto Jafeth Castro\\Game.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-27T19:13:08.929Z"
+              "WhenOpened": "2025-08-27T19:13:08.929Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -89,27 +93,27 @@
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Game.cpp",
               "ToolTip": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Game.cpp",
               "RelativeToolTip": "Proyecto Jafeth Castro\\Game.cpp",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-27T19:31:28.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Board.cpp",
               "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.cpp",
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Board.cpp",
               "ToolTip": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.cpp",
               "RelativeToolTip": "Proyecto Jafeth Castro\\Board.cpp",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-27T23:48:18.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Board.h",
               "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\Board.h",
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\Board.h",
@@ -117,11 +121,12 @@
               "RelativeToolTip": "Proyecto Jafeth Castro\\Board.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-27T19:12:59.72Z"
+              "WhenOpened": "2025-08-27T19:12:59.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\jafet\\OneDrive\\Desktop\\Documentos U\\Programacion I\\Proyecto Jafeth Castro\\Proyecto Jafeth Castro\\main.cpp",
               "RelativeDocumentMoniker": "Proyecto Jafeth Castro\\main.cpp",
@@ -129,7 +134,8 @@
               "RelativeToolTip": "Proyecto Jafeth Castro\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-27T17:30:28.818Z"
+              "WhenOpened": "2025-08-27T17:30:28.818Z",
+              "EditorCaption": ""
             }
           ]
         }
