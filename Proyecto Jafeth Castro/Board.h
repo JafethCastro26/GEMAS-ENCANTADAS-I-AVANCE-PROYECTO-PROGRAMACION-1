@@ -13,22 +13,29 @@ private:
 	int movesLeft;
 	int actualScore;
 	int goalScore;
+	int level;
+	int bombsActivationCounter;
 	bool pendingMatchProcess;
 	bool lastSwapWasValid;
+	bool supressBombGeneration = false;
 
 public:
-	Board();
+	Board(int level = 1);
 	~Board();
 	int getMovesLeft();
 	int getActualScore();
 	int getGoalScore();
 	bool getPendingMatchProcess();
 	bool getLastSwapWasValid();
+	int getBombsActivationCounter();
 	void setPendingMatchProcess(bool pPendingMatchProcess);
 	void setLastSwapWasValid(bool pLastSwapWasValid);
 	void drawGems(RenderWindow& window);
 	bool checkVerticalMatches(bool toRemove[8][8]);
 	bool checkHorizontalMatches(bool toRemove[8][8]);
+	void generateHorizontalBombs(bool toRemove[8][8]);
+	void generateVerticalBombs(bool toRemove[8][8]);
+	void triggerBombsOnMove(int bombRow,int bombCol);
 	void dropGemsAndFill(bool toRemove[8][8]);
 	bool areGemsAdjacent(int row1,int col1,int row2,int col2);
 	void updateGemsPosition();
@@ -41,6 +48,8 @@ public:
 	bool areTwoSelected();
 	void moveGems(float frameTime);
 	bool allGemsAtTarget();
+	void checkAdjacentIce(bool toRemove[8][8]);
+	int countIceGems();
 
 
 };

@@ -6,7 +6,7 @@ using namespace std;
 using namespace sf;
 
 
-void Game::startWindow3(bool isWin, int finalScore) {
+void Game::startFinalWindow(bool isWin, int finalScore) {
     RenderWindow window(VideoMode(400, 300), "Resultado");
     Font font;
     font.loadFromFile("font/PressStart2P-Regular.ttf");
@@ -37,9 +37,33 @@ void Game::startWindow3(bool isWin, int finalScore) {
     playAgainText.setString("Volver a jugar");
     playAgainText.setPosition(80, 175);
 
+    // Botón Nivel 2
+    RectangleShape level2Button(Vector2f(250, 40));
+    level2Button.setPosition(75, 220);
+    level2Button.setFillColor(sf::Color(100, 200, 255));
+
+    Text level2Text;
+    level2Text.setFont(font);
+    level2Text.setCharacterSize(16);
+    level2Text.setFillColor(Color::Black);
+    level2Text.setString("Empezar Nivel 2");
+    level2Text.setPosition(80, 225);
+
+    // botón para nivel 3
+    RectangleShape level3Button(Vector2f(250, 40));
+    level3Button.setPosition(75, 220);
+    level3Button.setFillColor(sf::Color(100, 200, 255));
+
+    Text level3Text;
+    level3Text.setFont(font);
+    level3Text.setCharacterSize(16);
+    level3Text.setFillColor(Color::Black);
+    level3Text.setString("Empezar Nivel 3");
+    level3Text.setPosition(80, 225);
+
     // Botón Salir
     RectangleShape exitButton(Vector2f(250, 40));
-    exitButton.setPosition(75, 220);
+    exitButton.setPosition(75, 270);
     exitButton.setFillColor(Color(255, 100, 100));
 
     Text exitText;
@@ -47,7 +71,7 @@ void Game::startWindow3(bool isWin, int finalScore) {
     exitText.setCharacterSize(17);
     exitText.setFillColor(Color::Black);
     exitText.setString("Salir");
-    exitText.setPosition(150, 225);
+    exitText.setPosition(150, 275);
 
     while (window.isOpen()) {
         Event event;
@@ -61,11 +85,28 @@ void Game::startWindow3(bool isWin, int finalScore) {
                     window.close();
                     startWindow2(); 
                 }
+                if (isWin) {
+                    if (level == 1 && level2Button.getGlobalBounds().contains(mouseF)) {
+                        this->level = 2;
+                        window.close();
+                        startWindow2();
+                    }
+                   
+                    if (level == 2 && level3Button.getGlobalBounds().contains(mouseF)) {
+                        this->level = 3;
+                        window.close();
+                        startWindow2();
+  
+                    }
+                }
                 if (exitButton.getGlobalBounds().contains(mouseF)) {
                     window.close();
                 }
             }
         }
+
+       
+
         window.clear();
         window.draw(resultText);
         window.draw(scoreText);
@@ -73,15 +114,22 @@ void Game::startWindow3(bool isWin, int finalScore) {
         window.draw(playAgainText);
         window.draw(exitButton);
         window.draw(exitText);
+        if (isWin && level == 1) {
+            window.draw(level2Button);
+            window.draw(level2Text);
+        }
+            if (isWin && level == 2) {
+                window.draw(level3Button);
+                window.draw(level3Text);
+            }
+        
         window.display();
     }
 }
 
-
-
 void Game::startWindow2()
 {
-    Board board;
+    Board board(level);
     RenderWindow window(VideoMode(800, 600), "GEMAS ENCANTADAS");
     Texture texture;
     if (!texture.loadFromFile("img/background.png"))
@@ -102,7 +150,7 @@ void Game::startWindow2()
 
    letter.setScale(0.7f,0.7f);
     letter.setPosition(450, -30);
-         
+
 
     Text movesText, scoreText, goalText;
     movesText.setFont(font);
@@ -120,11 +168,50 @@ void Game::startWindow2()
     scoreText.setPosition(640, 77);
     movesText.setPosition(670, 117);
     goalText.setPosition(623, 155);
+
+    // Barra de progreso 
+    RectangleShape progressBg(Vector2f(200.f, 18.f));
+    progressBg.setPosition(560.f, 240.f);
+    progressBg.setFillColor(Color(40, 40, 40));
+    progressBg.setOutlineColor(Color::White);
+    progressBg.setOutlineThickness(1.f);
+
+    RectangleShape progressFill(Vector2f(0.f, 18.f));
+    progressFill.setPosition(560.f, 240.f);
+    progressFill.setFillColor(Color(100, 200, 255));
+
+    Text progressText;
+    progressText.setFont(font);
+    progressText.setCharacterSize(13);
+    progressText.setStyle(Text::Bold);
+    progressText.setFillColor(Color::White);
+    progressText.setOutlineColor(Color::Black);   
+    progressText.setOutlineThickness(2.f);
+    progressText.setPosition(560.f, 225.f);
+
+    Text iceText;
+    iceText.setFont(font);
+    iceText.setCharacterSize(13);
+    iceText.setStyle(Text::Bold);
+    iceText.setFillColor(Color::White);
+    iceText.setOutlineColor(Color::Black);
+    iceText.setOutlineThickness(2.f);
+    iceText.setPosition(560.f, 264.f);
+
+    Text bombsText;
+    bombsText.setFont(font);
+    bombsText.setCharacterSize(13);
+    bombsText.setStyle(Text::Bold);
+    bombsText.setFillColor(Color::White);
+    bombsText.setOutlineColor(Color::Black);
+    bombsText.setOutlineThickness(2.f);
+    bombsText.setPosition(560.f, 288.f);
+
+    float progress = 0.f;
     Clock clock;
     while (window.isOpen())
 
     {
-
         float FrameTime = clock.restart().asSeconds();
             board.moveGems(FrameTime);
              static bool inMatchLoop = false;
@@ -158,6 +245,17 @@ void Game::startWindow2()
         scoreText.setString(to_string(board.getActualScore()));
         goalText.setString(to_string(board.getGoalScore()));
 
+        // Actualizar barra de progreso
+         progress = 0.f;
+        if (board.getGoalScore() > 0) progress = min(1.f, (float)board.getActualScore() / (float)board.getGoalScore());
+        progressFill.setSize(Vector2f(200.f * progress, 18.f));
+        progressText.setString("Progreso: " + to_string((int)(progress * 100)) + "%");
+        iceText.setString("Hielo restantes: " + to_string(board.countIceGems()));
+        bombsText.setString("Explosiones: " + to_string(board.getBombsActivationCounter()) + " / 5");
+
+
+
+
         Event event;
         while (window.pollEvent(event))
         {
@@ -173,26 +271,37 @@ void Game::startWindow2()
                     }
                 }
             }
+        }
 
-            if (board.getActualScore() >= board.getGoalScore()) {
+
+        if (board.getActualScore() >= board.getGoalScore() && board.countIceGems() == 0 &&
+            (level != 3 || board.getBombsActivationCounter() >= 5)) {
                 window.close();
-                startWindow3(true,board.getActualScore()); 
-            }
-            else if (board.getMovesLeft() <= 0) {
-                window.close();
-                startWindow3(false,board.getActualScore()); 
-            }
+                startFinalWindow(true, board.getActualScore());
+        }
 
-
+        
+        else if (board.getMovesLeft() <= 0) {
+            window.close();
+            startFinalWindow(false,board.getActualScore()); 
         }
         
         window.clear(); 
         window.draw(sprite);
-		board.drawGems(window);
+        board.drawGems(window);
         window.draw(letter);
         window.draw(scoreText);
         window.draw(movesText);
         window.draw(goalText);
+        window.draw(progressBg);
+        window.draw(progressFill);
+        window.draw(progressText);
+        if (level > 1) {
+            window.draw(iceText);
+        }
+        if (level > 2) {
+            window.draw(bombsText);
+        }
         window.display();
     }
 }

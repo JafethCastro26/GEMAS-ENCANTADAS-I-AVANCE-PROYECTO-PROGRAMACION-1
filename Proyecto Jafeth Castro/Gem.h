@@ -5,7 +5,7 @@ using namespace std;
 using namespace sf;
 class Gem{
 
-private:
+protected:
 	int type;
 	Sprite sprite;
 	Texture texture;
@@ -16,9 +16,14 @@ private:
 public:
 	Gem();
 	~Gem();
-	int getType();
-	void setType();
-	void setType(int pType);
+	virtual int getType() = 0;
+	virtual void setType() = 0;
+	virtual bool isIce();
+	virtual bool isBomb();
+	virtual void weakenIce() {};
+	virtual bool isBroken() { return false; }
+	virtual void setIceStrength(int pIceStrenght) {};
+    void setType(int pType);
 	Sprite getSprite();
 	void setSprite();
 	Texture getTexture();
@@ -29,9 +34,11 @@ public:
 	void generateGem();
 	void setTargetPosition(const Vector2f& pTargetPosition);
 	void drawGem(RenderWindow& window);
-	void doMoveEffect(float frameTime);
+	virtual void doMoveEffect(float frameTime);
 	bool isAtTarget();
 	void setGemPosition(Vector2f position);
+	
+	
 	
 	
 

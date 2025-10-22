@@ -8,7 +8,7 @@ Gem::Gem() {
 	if (!texture.loadFromFile("img/ERROR_GEM.jpg")) { 
 		cout << "ERROR AL CARGAR LA IMAGEN";
 	}
-	fallSpeed = 500.0f;
+	fallSpeed = 0.5f;
 	currentPosition = Vector2f(0,0);
 	targetPosition = Vector2f(0, 0);
 
@@ -16,12 +16,16 @@ Gem::Gem() {
 
 Gem::~Gem() {};
 
-int Gem::getType() {
-	return type;
+bool Gem::isIce()
+{
+	return false;
 }
-void Gem::setType() {
-	type = rand() % 5;
+
+bool Gem::isBomb()
+{
+	return false;
 }
+
 void Gem::setType(int pType) {
 	type = pType;
 }

@@ -27,6 +27,15 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="normalGem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iceGem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bombGem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gem.h">
@@ -36,6 +45,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="normalGem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iceGem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bombGem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
